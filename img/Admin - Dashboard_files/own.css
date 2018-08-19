@@ -1,0 +1,80 @@
+.blue {
+    color: blue;
+}
+.m {
+    margin: 4px;
+}
+.font-size {
+    font-size: 16px;
+}
+.color {
+    width: 70px;
+    height: 20px;
+}
+
+
+.color-checkboxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  
+  .color-checkbox {
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    position: relative;
+    border-radius: 16px;
+    -webkit-transition: -webkit-transform 0.1s linear;
+    transition: -webkit-transform 0.1s linear;
+    transition: transform 0.1s linear;
+    transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+  }
+  .color-checkbox.bordered {
+    box-shadow: 0 0 0 2px #f0f0f0 inset;
+  }
+  .color-checkbox.bordered:after {
+    border-color: black;
+  }
+  .color-checkbox.Any {
+    background: -webkit-linear-gradient(135deg, #e91e63 0%, #e91e63 15%, #673ab7 15%, #673ab7 30%, #2196f3 30%, #2196f3 45%, #8bc34a 45%, #8bc34a 60%, #fdd835 60%, #fdd835 75%, #ff9800 75%, #ff9800 90%, #f44336 90%, #f44336 100%);
+    background: linear-gradient(-45deg, #e91e63 0%, #e91e63 15%, #673ab7 15%, #673ab7 30%, #2196f3 30%, #2196f3 45%, #8bc34a 45%, #8bc34a 60%, #fdd835 60%, #fdd835 75%, #ff9800 75%, #ff9800 90%, #f44336 90%, #f44336 100%);
+  }
+  .color-checkbox:after {
+    content: '';
+    display: block;
+    width: 6.66667px;
+    height: 13.33333px;
+    position: absolute;
+    top: 6.01504px;
+    left: 12.03008px;
+    border: 2px solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    opacity: 0;
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+  }
+  .color-checkbox:hover, .color-checkbox__input:focus + .color-checkbox {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .color-checkbox__input:checked + .color-checkbox:after {
+    opacity: 1;
+  }
+  
+  .color-checkbox__input {
+    visibility: hidden;
+    width: 0;
+    pointer-events: none;
+    position: absolute;
+  }
